@@ -437,7 +437,7 @@ var config = {
 					image: new ol.style.Circle({
 						fill: fill,
 						stroke: stroke,
-						radius: 1
+						radius: 5
 					}),
 							text: new ol.style.Text({
 								color: 'white',
@@ -456,6 +456,42 @@ var config = {
 			group: 'Name:ca',
 			title: 'Name:ca via',
 			query: '(way["name:ca"]["name"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'base/circle.svg',
+			iconStyle: 'background-color:#ffffff',
+			style: function (feature) {
+				var key_regex = /^name:ca$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,255,255,0.1)'
+				});
+
+				var stroke = new ol.style.Stroke({
+					color: '#0000ff',
+					width: 5
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Circle({
+						fill: fill,
+						stroke: stroke,
+						radius: 5
+					}),
+							text: new ol.style.Text({
+								color: 'white',
+								text: name,
+								placement:'line',
+								font: '14px Verdana'
+							}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+		},
+		{
+			group: 'Name:ca',
+			title: 'Name:ca relació',
+			query: '(relation["name:ca"][name]({{bbox}}););out skel;',
 			iconSrc: imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:#0000ff',
 			style: function (feature) {
