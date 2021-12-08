@@ -456,7 +456,7 @@ var config = {
 			group: 'Name:ca',
 			title: 'Name:ca via',
 			query: '(way["name:ca"]["name"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
+			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#ffffff',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
@@ -492,7 +492,7 @@ var config = {
 			group: 'Name:ca',
 			title: 'Name:ca relació',
 			query: '(relation["name:ca"][name]({{bbox}}););out skel;',
-			iconSrc: imgSrc + 'base/circle.svg',
+			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#0000ff',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
@@ -515,7 +515,6 @@ var config = {
 							text: new ol.style.Text({
 								color: 'white',
 								text: name,
-								placement:'line',
 								font: '14px Verdana'
 							}),
 					fill: fill,
