@@ -426,7 +426,7 @@ var config = {
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,255,0.4)'
+					color: 'rgba(0,0,255,0.1)'
 				});
 
 				var stroke = new ol.style.Stroke({
