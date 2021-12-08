@@ -457,7 +457,7 @@ var config = {
 			title: 'Name:ca via',
 			query: '(way["name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/line.png',
-			iconStyle: 'background-color:#ffffff',
+			iconStyle: 'background-color:#fffff0',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -491,9 +491,9 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Name:ca relació',
-			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
+			query: '(relation["name:ca"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'base/line.png',
-			iconStyle: 'background-color:#0000ff',
+			iconStyle: 'background-color:#00000f',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
