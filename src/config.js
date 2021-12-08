@@ -417,7 +417,7 @@ var config = {
 		},
 		{
 			group: 'Name:ca',
-			title: '1970s',
+			title: 'Amb name:ca i name',
 			query: '(nwr["name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:#0000ff',
@@ -440,7 +440,8 @@ var config = {
 						radius: 5
 					}),
 							text: new ol.style.Text({
-								text: name
+								text: name,
+								placement: 'line'
 							}),
 					fill: fill,
 					stroke: stroke
