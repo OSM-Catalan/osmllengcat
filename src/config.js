@@ -185,241 +185,9 @@ var config = {
 		
 		{
 			group: 'Name:ca',
-			title: 'Amb name:ca',
-			query: '(node["name:ca"]["name"]({{bbox}}););out meta;',
-			iconSrc: imgSrc + 'icones_llum/lit_osm_none.svg',
-			iconStyle: 'background-color:#FFFFFF',
-						scale: 1,
-			style: function () {
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-						src: imgSrc + 'icones_llum/lit_osm_none.svg'
-					})
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Name:ca',
-			title: 'Sense name:ca',
-			query: '(node[!"name:ca"]["name"]({{bbox}}););out meta;',
-			iconSrc: imgSrc + 'icones_llum/lit_osm_minimal.svg',
-			iconStyle: 'background-color:#FFFFFF',
-						scale: 1,
-			style: function () {
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-						src: imgSrc + 'icones_llum/lit_osm_minimal.svg'
-					})
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Percep',
-			title: 'Llum pobra',
-			query: '(node["lit:perceived"="poor"]({{bbox}}););out meta;',
-			iconSrc: imgSrc + 'icones_llum/lit_osm_poor.svg',
-			iconStyle: 'background-color:#FFFFFF',
-						scale: 1,
-			style: function () {
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-						src: imgSrc + 'icones_llum/lit_osm_poor.svg'
-					})
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Percep',
-			title: 'Bona llum',
-			query: '(node["lit:perceived"="good"]({{bbox}}););out meta;',
-			iconSrc: imgSrc + 'icones_llum/lit_osm_good.svg',
-			iconStyle: 'background-color:#FFFFFF',
-						scale: 1,
-			style: function () {
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-						src: imgSrc + 'icones_llum/lit_osm_good.svg'
-					})
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Percep',
-			title: 'Com si fos de dia',
-			query: '(node["lit:perceived"="daylike"]({{bbox}}););out meta;',
-			iconSrc: imgSrc + 'icones_llum/lit_osm_daylike.svg',
-			iconStyle: 'background-color:#FFFFFF',
-						scale: 1,
-			style: function () {
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-						src: imgSrc + 'icones_llum/lit_osm_daylike.svg'
-					})
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Percep',
-			title: 'No info',
-			query: '(node[!"lit:perceived"][highway=street_lamp]({{bbox}}););out meta;',
-			iconSrc: imgSrc + 'icones_llum/lit_osm_question.svg',
-			iconStyle: 'background-color:#FFFFFF',
-						scale: 1,
-			style: function () {
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-						src: imgSrc + 'icones_llum/lit_osm_question.svg'
-					})
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Name:ca',
-			title: 'Amb name:ca',
-			query: '(nwr["name:ca"]["name"]({{bbox}});node(w););out;',
-			iconSrc: imgSrc + 'base/dots.png',
-			iconStyle: 'background-color:#000000',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(0,0,0,0.4)',
-					width: 5
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Name:ca',
-			title: 'Sense name:ca',
-			query: '(nwr[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/tdot.png',
-			iconStyle: 'background-color:#394b3e',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(57,128,78,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(57,128,78,0.4)',
-					width: 5,
-					lineDash: [4,8],
-					lineDashOffset: 6
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Name:ca',
-			title: 'Sense name:ca nwr',
-			query: '(nwr[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/tdot.png',
-			iconStyle: 'background-color:#394b3e',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(57,128,78,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(57,128,78,0.4)',
-					width: 5,
-					lineDash: [4,8],
-					lineDashOffset: 6
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Name:ca',
-			title: 'Sense name:ca node3',
-			query: '(node[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/tdot.png',
-			iconStyle: 'background-color:#394b3e',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(57,128,78,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(57,128,78,0.4)',
-					width: 5,
-					lineDash: [4,8],
-					lineDashOffset: 6
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-
-		// Mobilitat (Exprés.cat)
-		{
-			group: 'Name:ca',
-			title: 'Exprés.cat (Barcelona2)',
-			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}}););out skel;',
-			iconSrc: imgSrc + 'base/line.png',
-			iconStyle: 'background-color:#40E0D0',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(64,224,208,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: '#40E0D0',
-					width: 5
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-
-		// Mobilitat (Exprés.cat)
-		{
-			group: 'Name:ca',
-			title: 'Exprés.cat (Borrat)',
-			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
-			iconSrc: imgSrc + 'base/line.png',
-			iconStyle: 'background-color:#40E0D0',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(64,224,208,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: '#40E0D0',
-					width: 5
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Name:ca',
 			title: 'Name:ca node',
 			query: '(node["name:ca"]["name"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
+			iconSrc: imgSrc + 'icones_senyera/senyera.svg',
 			iconStyle: 'background-color:#0000ff',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
@@ -456,7 +224,7 @@ var config = {
 			group: 'Name:ca',
 			title: 'Name:ca via',
 			query: '(way["name:ca"]["name"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/line.png',
+			iconSrc: imgSrc + 'icones_senyera/senyera.svg',
 			iconStyle: 'background-color:#fffff0',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
@@ -492,7 +260,7 @@ var config = {
 			group: 'Name:ca',
 			title: 'Name:ca relació',
 			query: '(relation["name:ca"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
-			iconSrc: imgSrc + 'base/line.png',
+			iconSrc: imgSrc + 'icones_senyera/senyera.svg',
 			iconStyle: 'background-color:#00000f',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
@@ -528,7 +296,7 @@ var config = {
 			group: 'Name:ca',
 			title: 'Sense name:ca node',
 			query: '(node[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
+			iconSrc: imgSrc + 'icones_senyera/senyera_question.svg',
 			iconStyle: 'background-color:#0000ff',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
@@ -565,7 +333,7 @@ var config = {
 			group: 'Name:ca',
 			title: 'Sense Name:ca via',
 			query: '(way[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/line.png',
+			iconSrc: imgSrc + 'icones_senyera/senyera_question.svg',
 			iconStyle: 'background-color:#fffff0',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
@@ -601,7 +369,7 @@ var config = {
 			group: 'Name:ca',
 			title: 'Sense Name:ca relació',
 			query: '(relation[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
-			iconSrc: imgSrc + 'base/line.png',
+			iconSrc: imgSrc + 'icones_senyera/senyera_question.svg',
 			iconStyle: 'background-color:#00000f',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
@@ -633,114 +401,8 @@ var config = {
 				return style;
 			}
 		},
-
 		{
-			group: 'Percep',
-			title: 'Llum pobra (via)',
-			query: '(way[highway]["lit:perceived"="poor"]({{bbox}});node(w););out;',
-			iconSrc: imgSrc + 'base/tdot2.png',
-			iconStyle: 'background-color:#39804e',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(57,75,62,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(57,75,62,0.4)',
-					width: 5
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Percep',
-			title: 'Llum bona (via)',
-			query: '(way[highway]["lit:perceived"="good"]({{bbox}});node(w););out;',
-			iconSrc: imgSrc + 'base/lineline.png',
-			iconStyle: 'background-color:#2bc95b',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(43,201,91,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(43,201,91,0.4)',
-					width: 5
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Percep',
-			title: 'Com si fos de dia (via)',
-			query: '(way[highway]["lit:perceived"="daylike"]({{bbox}});node(w););out;',
-			iconSrc: imgSrc + 'base/line.png',
-			iconStyle: 'background-color:#00ff4d',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,255,77,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(0,255,77,0.4)',
-					width: 5
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Enllumenat',
-			title: 'Enllumenat sí',
-			query: '(way[highway][lit=yes]({{bbox}});node(w););out;',
-			iconSrc: imgSrc + 'base/line.png',
-			iconStyle: 'background-color:#229954',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(34,153,84,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(34,153,84,0.4)',
-					width: 5
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Enllumenat',
-			title: 'Enllumenat no',
-			query: '(way[highway][lit=no]({{bbox}});node(w););out;',
-			iconSrc: imgSrc + 'base/line.png',
-			iconStyle: 'background-color:#000000',
-			style: function () {
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba(0,0,0,0.4)',
-					width: 5
-				});
-				var style = new ol.style.Style({
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
-		},
-		{
-			group: 'Enllumenat',
+			group: 'Test',
 			title: 'Sense dades',
 			query: '(way[highway][!lit]({{bbox}});node(w););out;',
 			iconSrc: imgSrc + 'base/line.png',
@@ -774,7 +436,7 @@ var config = {
 		//JOSM editor
 		edit.append($('<a>').css('marginLeft', 5).attr({title: 'JOSM', href: 'https://www.openstreetmap.org/edit?editor=remote&lon=' + coordinateLL[0] + '&lat=' + coordinateLL[1] + '&zoom=' + view.getZoom(), target: '_blank'}).html($('<img>').attr({src: imgSrc + 'JOSM Logotype 2019.svg', height: 20, width: 20})));
 		//Mapcomplete editor
-		edit.append($('<a>').css('marginLeft', 5).attr({title: 'Mapcomplete', href: 'https://mapcomplete.osm.be/index.html?z=' + view.getZoom() +'&lat='+ coordinateLL[1] +'&lon='+ coordinateLL[0] +'&userlayout=https%3A%2F%2Fraw.githubusercontent.com%2Fyopaseopor%2Fosmlitmap%2Fmaster%2Fsrc%2Fjson%2Flit.json&language=ca#welcome', target: '_blank'}).html($('<img>').attr({src: imgSrc + 'mapcomplete_logo.png', height: 20, width: 20})));
+		edit.append($('<a>').css('marginLeft', 5).attr({title: 'Mapcomplete', href: 'https://mapcomplete.osm.be/index.html?z=' + view.getZoom() +'&lat='+ coordinateLL[1] +'&lon='+ coordinateLL[0] +'&userlayout=https://osm-catalan.github.io/osmllengcat/src/json/osmllengcat.json&language=ca#welcome', target: '_blank'}).html($('<img>').attr({src: imgSrc + 'mapcomplete_logo.png', height: 20, width: 20})));
 		
 		var open = $('<div>').html(config.i18n.openWith);
 		//OSM
