@@ -511,7 +511,7 @@ var config = {
              }),
              stroke: new ol.style.Stroke({
               color: '#f2f',
-              width: 1
+              width: 1})
             });
 				return style;
 			}
