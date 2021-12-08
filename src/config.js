@@ -186,7 +186,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Amb name:ca',
-			query: '(nwr["name:ca"]["name"]({{bbox}}););out meta;',
+			query: '(node["name:ca"]["name"]({{bbox}}););out meta;',
 			iconSrc: imgSrc + 'icones_llum/lit_osm_none.svg',
 			iconStyle: 'background-color:#FFFFFF',
 						scale: 1,
@@ -202,7 +202,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Sense name:ca',
-			query: '(nwr[!"name:ca"]["name"]({{bbox}}););out meta;',
+			query: '(node[!"name:ca"]["name"]({{bbox}}););out meta;',
 			iconSrc: imgSrc + 'icones_llum/lit_osm_minimal.svg',
 			iconStyle: 'background-color:#FFFFFF',
 						scale: 1,
@@ -303,7 +303,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Sense name:ca',
-			query: '(nwr[!"name:ca"]["name"]({{bbox}});node(w););out;',
+			query: '(nwr[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'base/tdot.png',
 			iconStyle: 'background-color:#394b3e',
 			style: function () {
