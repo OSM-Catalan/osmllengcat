@@ -280,9 +280,9 @@ var config = {
 			}
 		},
 		{
-			group: 'Percep',
-			title: 'No hi ha llum (via)',
-			query: '(way[highway]["lit:perceived"="none"]({{bbox}});node(w););out;',
+			group: 'Name:ca',
+			title: 'Amb name:ca',
+			query: '(nwr["name:ca"]["name"]({{bbox}});node(w););out;',
 			iconSrc: imgSrc + 'base/dots.png',
 			iconStyle: 'background-color:#000000',
 			style: function () {
@@ -301,9 +301,9 @@ var config = {
 			}
 		},
 		{
-			group: 'Percep',
-			title: 'Llum mínima (via)',
-			query: '(way[highway]["lit:perceived"="minimal"]({{bbox}});node(w););out;',
+			group: 'Name:ca',
+			title: 'Sense name:ca',
+			query: '(nwr[!"name:ca"]["name"]({{bbox}});node(w););out;',
 			iconSrc: imgSrc + 'base/tdot.png',
 			iconStyle: 'background-color:#394b3e',
 			style: function () {
