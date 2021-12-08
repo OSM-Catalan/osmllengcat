@@ -372,7 +372,7 @@ var config = {
 
 		// Mobilitat (Exprés.cat)
 		{
-			group: 'Mobilitat',
+			group: 'Name:ca',
 			title: 'Exprés.cat (Barcelona2)',
 			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}}););out skel;',
 			iconSrc: imgSrc + 'base/line.png',
@@ -395,7 +395,7 @@ var config = {
 
 		// Mobilitat (Exprés.cat)
 		{
-			group: 'Mobilitat',
+			group: 'Name:ca',
 			title: 'Exprés.cat (Borrat)',
 			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'base/line.png',
@@ -415,6 +415,39 @@ var config = {
 				return style;
 			}
 		},
+		{
+			group: 'Name:ca',
+			title: '1970s',
+			query: '(nwr["name:ca"]["name"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'base/circle.svg',
+			iconStyle: 'background-color:#0000ff',
+			style: function (feature) {
+				var key_regex = /^name:ca$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(0,0,255,0.4)'
+				});
+
+				var stroke = new ol.style.Stroke({
+					color: '#0000ff',
+					width: 1.25
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Circle({
+						fill: fill,
+						stroke: stroke,
+						radius: 5
+					}),
+							text: new ol.style.Text({
+								text: name
+							}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+},
 		{
 			group: 'Percep',
 			title: 'Llum pobra (via)',
