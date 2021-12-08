@@ -440,7 +440,7 @@ var config = {
 						radius: 5
 					}),
 							text: new ol.style.Text({
-								color: '#0000ff',
+								color: white,
 								text: name,
 								font: '14px Verdana',
 								offsetX : 0,
