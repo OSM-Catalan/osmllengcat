@@ -418,7 +418,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Name:ca node',
-			query: '(nwr["name:ca"]["name"]({{bbox}});node(w););out meta;',
+			query: '(node["name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:#0000ff',
 			style: function (feature) {
@@ -527,7 +527,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Sense name:ca node',
-			query: '(nwr[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
+			query: '(node[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:#0000ff',
 			style: function (feature) {
@@ -600,7 +600,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Sense Name:ca relació',
-			query: '(relation[!"name:ca"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
+			query: '(relation[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#00000f',
 			style: function (feature) {
