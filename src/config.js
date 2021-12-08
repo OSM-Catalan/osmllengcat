@@ -303,7 +303,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Sense name:ca',
-			query: '(nwr[!"name:ca"]["name"]({{bbox}});node(w););out;',
+			query: '(nwr[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/tdot.png',
 			iconStyle: 'background-color:#394b3e',
 			style: function () {
@@ -326,7 +326,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Sense name:ca nwr',
-			query: '(nwr[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out;',
+			query: '(nwr[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/tdot.png',
 			iconStyle: 'background-color:#394b3e',
 			style: function () {
@@ -348,8 +348,8 @@ var config = {
 		},
 		{
 			group: 'Name:ca',
-			title: 'Sense name:ca node2',
-			query: '(node[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out;',
+			title: 'Sense name:ca node3',
+			query: '(node[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/tdot.png',
 			iconStyle: 'background-color:#394b3e',
 			style: function () {
