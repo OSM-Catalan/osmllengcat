@@ -348,7 +348,7 @@ var config = {
 		},
 		{
 			group: 'Name:ca',
-			title: 'Sense name:ca node',
+			title: 'Sense name:ca node2',
 			query: '(node[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out;',
 			iconSrc: imgSrc + 'base/tdot.png',
 			iconStyle: 'background-color:#394b3e',
