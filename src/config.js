@@ -467,7 +467,7 @@ var config = {
 				});
 
 				var stroke = new ol.style.Stroke({
-					color: '#0000ff',
+					color: '#ffffff',
 					width: 5
 				});
 				var style = new ol.style.Style({
@@ -491,7 +491,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Name:ca relació',
-			query: '(relation["name:ca"][name]({{bbox}}););out skel;',
+			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#0000ff',
 			style: function (feature) {
