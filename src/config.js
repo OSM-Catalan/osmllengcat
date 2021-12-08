@@ -374,6 +374,29 @@ var config = {
 		{
 			group: 'Mobilitat',
 			title: 'Exprés.cat (Barcelona)',
+			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}});way(r)({{bbox}});node(w)({{bbox}}););out skel;',
+			iconSrc: imgSrc + 'base/line.png',
+			iconStyle: 'background-color:#40E0D0',
+			style: function () {
+				var fill = new ol.style.Fill({
+					color: 'rgba(64,224,208,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: '#40E0D0',
+					width: 5
+				});
+				var style = new ol.style.Style({
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+		},
+
+		// Mobilitat (Exprés.cat)
+		{
+			group: 'Mobilitat',
+			title: 'Exprés.cat (Borrat)',
 			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#40E0D0',
