@@ -417,7 +417,7 @@ var config = {
 		},
 		{
 			group: 'Name:ca',
-			title: 'Amb name:ca i name place line4',
+			title: 'Name:ca node',
 			query: '(nwr["name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:#0000ff',
