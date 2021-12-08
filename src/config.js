@@ -474,7 +474,10 @@ var config = {
 						radius: 5
 					}),
 							text: new ol.style.Text({
-								text: name
+             font: '14px Verdana',
+			 text: name,
+             fill: new ol.style.Fill({
+              color: '#000000'
 							}),
 					fill: fill,
 					stroke: stroke
@@ -482,38 +485,7 @@ var config = {
 				return style;
 			}
 		},
-		{
-			group: 'Name:ca',
-			title: 'Amb name:ca i name test',
-			query: '(nwr["name:ca"]["name"]({{bbox}});node(w););out meta;',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:#0000ff',
-			style: function (feature) {
-				var key_regex = /^name:ca$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,255,0.4)'
-				});
 
-				var style = new ol.style.Style({
-             fill: new ol.style.Fill({
-             color: 'rgba(255,255,255,0.4)'
-           }),
-           stroke: new ol.style.Stroke({
-             color: '#3399CC',
-             width: 1.25
-           }),
-           text: new ol.style.Text({
-             font: '14px Verdana',
-             fill: new ol.style.Fill({
-              color: '#000000'
-             }),
-             stroke: new ol.style.Stroke({
-              color: '#f2f',
-              width: 1})
-			}
-},
 		{
 			group: 'Percep',
 			title: 'Llum pobra (via)',
