@@ -491,7 +491,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Name:ca relació',
-			query: '(relation["name:ca"]({{bbox}});way(r)({{bbox}});node(r););out skel;',
+			query: '(relation["name:ca"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#00000f',
 			style: function (feature) {
@@ -515,6 +515,7 @@ var config = {
 							text: new ol.style.Text({
 								color: 'white',
 								text: name,
+								placement: 'line',
 								font: '14px Verdana'
 							}),
 					fill: fill,
@@ -525,8 +526,81 @@ var config = {
 		},
 		{
 			group: 'Name:ca',
-			title: 'Name:ca relació 2',
-			query: '(relation["name:ca"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
+			title: 'Sense name:ca node',
+			query: '(nwr[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'base/circle.svg',
+			iconStyle: 'background-color:#0000ff',
+			style: function (feature) {
+				var key_regex = /^name:ca$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(0,0,255,0.1)'
+				});
+
+				var stroke = new ol.style.Stroke({
+					color: '#0000ff',
+					width: 0.5
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Circle({
+						fill: fill,
+						stroke: stroke,
+						radius: 5
+					}),
+							text: new ol.style.Text({
+								color: 'white',
+								text: name,
+								font: '14px Verdana',
+								offsetX : 0,
+								offsetY : 12
+							}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+		},
+		{
+			group: 'Name:ca',
+			title: 'Sense Name:ca via',
+			query: '(way[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
+			iconSrc: imgSrc + 'base/line.png',
+			iconStyle: 'background-color:#fffff0',
+			style: function (feature) {
+				var key_regex = /^name:ca$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,255,255,0.1)'
+				});
+
+				var stroke = new ol.style.Stroke({
+					color: '#ffffff',
+					width: 5
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Circle({
+						fill: fill,
+						stroke: stroke,
+						radius: 5
+					}),
+							text: new ol.style.Text({
+								color: 'white',
+								text: name,
+								placement:'line',
+								font: '14px Verdana'
+							}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+		},
+		{
+			group: 'Name:ca',
+			title: 'Sense Name:ca relació',
+			query: '(relation[!"name:ca"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#00000f',
 			style: function (feature) {
