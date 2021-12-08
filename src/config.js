@@ -303,7 +303,53 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Sense name:ca',
+			query: '(nwr[!"name:ca"]["name"]({{bbox}});node(w););out;',
+			iconSrc: imgSrc + 'base/tdot.png',
+			iconStyle: 'background-color:#394b3e',
+			style: function () {
+				var fill = new ol.style.Fill({
+					color: 'rgba(57,128,78,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(57,128,78,0.4)',
+					width: 5,
+					lineDash: [4,8],
+					lineDashOffset: 6
+				});
+				var style = new ol.style.Style({
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+		},
+		{
+			group: 'Name:ca',
+			title: 'Sense name:ca nwr',
 			query: '(nwr[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
+			iconSrc: imgSrc + 'base/tdot.png',
+			iconStyle: 'background-color:#394b3e',
+			style: function () {
+				var fill = new ol.style.Fill({
+					color: 'rgba(57,128,78,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(57,128,78,0.4)',
+					width: 5,
+					lineDash: [4,8],
+					lineDashOffset: 6
+				});
+				var style = new ol.style.Style({
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+		},
+		{
+			group: 'Name:ca',
+			title: 'Sense name:ca node',
+			query: '(node[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'base/tdot.png',
 			iconStyle: 'background-color:#394b3e',
 			style: function () {
