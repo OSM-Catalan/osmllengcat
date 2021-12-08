@@ -373,8 +373,8 @@ var config = {
 		// Mobilitat (Exprés.cat)
 		{
 			group: 'Mobilitat',
-			title: 'Exprés.cat (Barcelona)',
-			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}});way(r)({{bbox}});node(w)({{bbox}}););out skel;',
+			title: 'Exprés.cat (Barcelona2)',
+			query: '(relation["network"="exprés.cat (Barcelona)"]({{bbox}}););out skel;',
 			iconSrc: imgSrc + 'base/line.png',
 			iconStyle: 'background-color:#40E0D0',
 			style: function () {
