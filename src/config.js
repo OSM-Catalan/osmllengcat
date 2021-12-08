@@ -417,7 +417,7 @@ var config = {
 		},
 		{
 			group: 'Name:ca',
-			title: 'Amb name:ca i name place line2',
+			title: 'Amb name:ca i name place line3',
 			query: '(nwr["name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:#0000ff',
@@ -442,10 +442,9 @@ var config = {
 							text: new ol.style.Text({
 								text: name,
 								font: '14px Verdana',
+								color: 'white'
 							}),
-					fill: new ol.style.Fill({
-              color: '#ffffff'
-							}),
+					fill: fill,
 					stroke: stroke
 				});
 				return style;
