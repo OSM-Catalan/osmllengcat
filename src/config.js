@@ -550,7 +550,7 @@ var config = {
 							text: new ol.style.Text({
 								color: 'white',
 								text: name,
-								placement: 'line'
+								placement: 'line',
 								font: '14px Verdana'
 							}),
 					fill: fill,
