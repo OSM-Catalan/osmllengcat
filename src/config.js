@@ -442,7 +442,9 @@ var config = {
 							text: new ol.style.Text({
 								color: '#0000ff',
 								text: name,
-								font: '14px Verdana'
+								font: '14px Verdana',
+								offsetX : 0,
+								offsetY : 12
 							}),
 					fill: fill,
 					stroke: stroke
