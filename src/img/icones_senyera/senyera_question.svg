@@ -28,7 +28,7 @@
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="emoji" />
+     inkscape:current-layer="color" />
   <g
      id="color">
     <rect
@@ -44,28 +44,32 @@
        width="62"
        height="4"
        fill="#d22f27"
-       id="rect845" />
+       id="rect845"
+       style="fill:#f90c00;fill-opacity:1" />
     <rect
        x="5"
        y="30"
        width="62"
        height="4"
        fill="#d22f27"
-       id="rect847" />
+       id="rect847"
+       style="fill:#ff0000;fill-opacity:1" />
     <rect
        x="5"
        y="38"
        width="62"
        height="4"
        fill="#d22f27"
-       id="rect849" />
+       id="rect849"
+       style="fill:#f90c00;fill-opacity:1" />
     <rect
        x="5"
        y="46"
        width="62"
        height="4"
        fill="#d22f27"
-       id="rect851" />
+       id="rect851"
+       style="fill:#f90a00;fill-opacity:1" />
     <rect
        style="fill:#ffff00;stroke:none;stroke-width:1.00157;stroke-linecap:round;stroke-linejoin:round"
        id="rect15833"
