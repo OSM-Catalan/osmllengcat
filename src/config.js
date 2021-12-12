@@ -188,17 +188,17 @@ var config = {
 			title: 'Name:ca node',
 			query: '(node["name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones_senyera/senyera.svg',
-			iconStyle: 'background-color:#0000ff',
+			iconStyle: 'background-color:#008000',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,255,0.1)'
+					color: 'rgba(0,128,0,0.1)'
 				});
 
 				var stroke = new ol.style.Stroke({
-					color: '#0000ff',
+					color: '#008000',
 					width: 0.5
 				});
 				var style = new ol.style.Style({
@@ -225,17 +225,17 @@ var config = {
 			title: 'Name:ca via',
 			query: '(way["name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones_senyera/senyera.svg',
-			iconStyle: 'background-color:#fffff0',
+			iconStyle: 'background-color:#008000',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba(255,255,255,0.1)'
+					color: 'rgba(0,128,0,0.1)'
 				});
 
 				var stroke = new ol.style.Stroke({
-					color: '#ffffff',
+					color: '#008000',
 					width: 5
 				});
 				var style = new ol.style.Style({
@@ -261,17 +261,17 @@ var config = {
 			title: 'Name:ca relació',
 			query: '(relation["name:ca"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'icones_senyera/senyera.svg',
-			iconStyle: 'background-color:#00000f',
+			iconStyle: 'background-color:#008000',
 			style: function (feature) {
 				var key_regex = /^name:ca$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,255,0.1)'
+					color: 'rgba(0,128,0,0.1)'
 				});
 
 				var stroke = new ol.style.Stroke({
-					color: '#0000ff',
+					color: '#008000',
 					width: 0.5
 				});
 				var style = new ol.style.Style({
@@ -297,17 +297,17 @@ var config = {
 			title: 'Sense name:ca node',
 			query: '(node[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones_senyera/senyera_question.svg',
-			iconStyle: 'background-color:#0000ff',
+			iconStyle: 'background-color:#ff0000',
 			style: function (feature) {
-				var key_regex = /^name:ca$/
+				var key_regex = /^name$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,255,0.1)'
+					color: 'rgba(255,0,0,0.1)'
 				});
 
 				var stroke = new ol.style.Stroke({
-					color: '#0000ff',
+					color: '#ff0000',
 					width: 0.5
 				});
 				var style = new ol.style.Style({
@@ -334,17 +334,17 @@ var config = {
 			title: 'Sense Name:ca via',
 			query: '(way[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones_senyera/senyera_question.svg',
-			iconStyle: 'background-color:#fffff0',
+			iconStyle: 'background-color:#ff0000',
 			style: function (feature) {
-				var key_regex = /^name:ca$/
+				var key_regex = /^name$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba(255,255,255,0.1)'
+					color: 'rgba(255,0,0,0.1)'
 				});
 
 				var stroke = new ol.style.Stroke({
-					color: '#ffffff',
+					color: '#ff0000',
 					width: 5
 				});
 				var style = new ol.style.Style({
@@ -370,17 +370,17 @@ var config = {
 			title: 'Sense Name:ca relació',
 			query: '(relation[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
 			iconSrc: imgSrc + 'icones_senyera/senyera_question.svg',
-			iconStyle: 'background-color:#00000f',
+			iconStyle: 'background-color:#ff0000',
 			style: function (feature) {
-				var key_regex = /^name:ca$/
+				var key_regex = /^name$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba(0,0,255,0.1)'
+					color: 'rgba(255,0,0,0.1)'
 				});
 
 				var stroke = new ol.style.Stroke({
-					color: '#0000ff',
+					color: '#ff0000',
 					width: 0.5
 				});
 				var style = new ol.style.Style({
