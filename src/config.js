@@ -332,7 +332,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Sense Name:ca via',
-			query: '(way[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
+			query: '(way["name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones_senyera/senyera_question.svg',
 			iconStyle: 'background-color:#ff0000',
 			style: function (feature) {
