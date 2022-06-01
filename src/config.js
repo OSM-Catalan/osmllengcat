@@ -14,6 +14,7 @@ var config = {
 		zoomGeolocation: 17,
 		units: 'metric'
 	},
+
 	i18n: {
 		layersLabel: 'Capes/Layers',
 		editWith: 'Edita:',
