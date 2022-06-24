@@ -246,11 +246,13 @@ var config = {
 						radius: 5
 					}),
 							text: new ol.style.Text({
-								color: 'white',
 								text: name,
-								placement:'line',
-								font: '14px Verdana'
-							}),
+								font: '14px Verdana',
+								offsetX : 0,
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(255,255,255,1)'
+                        }),
 					fill: fill,
 					stroke: stroke
 				});
@@ -355,11 +357,13 @@ var config = {
 						radius: 5
 					}),
 							text: new ol.style.Text({
-								color: 'white',
 								text: name,
-								placement:'line',
-								font: '14px Verdana'
-							}),
+								font: '14px Verdana',
+								offsetX : 0,
+								offsetY : 0,
+								fill: new ol.style.Fill({
+                            color: 'rgba(255,255,255,1)'
+                        }),
 					fill: fill,
 					stroke: stroke
 				});
