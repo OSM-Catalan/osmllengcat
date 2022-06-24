@@ -260,7 +260,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Name:ca relació',
-			query: '(relation["name:ca"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
+			query: '(relation["name:ca"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones_senyera/senyera.svg',
 			iconStyle: 'background-color:#008000',
 			style: function (feature) {
@@ -369,7 +369,7 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Sense Name:ca relació',
-			query: '(relation[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out skel;',
+			query: '(relation[!"name:ca"]["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones_senyera/senyera_question.svg',
 			iconStyle: 'background-color:#ff0000',
 			style: function (feature) {
