@@ -214,7 +214,7 @@ var config = {
 								offsetX : 0,
 								offsetY : 12,
 							fill: new ol.style.Fill({
-                            color: 'rgba(255,255,255,1)'
+                            color: 'rgba(0,0,0,1)'
                         }),
 							}),
 					fill: fill,
@@ -239,7 +239,7 @@ var config = {
 
 				var stroke = new ol.style.Stroke({
 					color: '#008000',
-					width: 5
+					width: 6
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Circle({
@@ -248,10 +248,12 @@ var config = {
 						radius: 5
 					}),
 							text: new ol.style.Text({
-								color: 'white',
 								text: name,
-								placement:'line',
-								font: '14px Verdana'
+								font: '14px Verdana',
+								placement: 'line',
+							fill: new ol.style.Fill({
+                            color: 'rgba(255,255,255,1)'
+                        }),
 							}),
 					fill: fill,
 					stroke: stroke
@@ -348,7 +350,7 @@ var config = {
 
 				var stroke = new ol.style.Stroke({
 					color: '#ff0000',
-					width: 5
+					width: 6
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Circle({
@@ -357,10 +359,12 @@ var config = {
 						radius: 5
 					}),
 							text: new ol.style.Text({
-								color: 'white',
 								text: name,
-								placement:'line',
-								font: '14px Verdana'
+								font: '14px Verdana',
+								placement: 'line',
+							fill: new ol.style.Fill({
+                            color: 'rgba(255,255,255,1)'
+                        }),
 							}),
 					fill: fill,
 					stroke: stroke
