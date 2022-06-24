@@ -337,9 +337,9 @@ var config = {
 		{
 			group: 'Name:ca',
 			title: 'Sense Name:ca via',
-			query: '(w[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
+			query: '(way[!"name:ca"]["name"]({{bbox}});node(w););out meta;',
 			iconSrc: imgSrc + 'icones_senyera/senyera_question.svg',
-			iconStyle: 'background-color:rgba(0,0,0,0.4)',
+			iconStyle: 'background-color:#ff0000',
 			style: function (feature) {
 				var key_regex = /^name$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
