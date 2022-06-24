@@ -209,11 +209,13 @@ var config = {
 						radius: 5
 					}),
 							text: new ol.style.Text({
-								color: 'white',
 								text: name,
 								font: '14px Verdana',
 								offsetX : 0,
 								offsetY : 12
+							fill: new ol.style.Fill({
+                            color: 'rgba(255,255,255,1)'
+                        }),
 							}),
 					fill: fill,
 					stroke: stroke
