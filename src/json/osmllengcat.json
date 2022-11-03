@@ -14,7 +14,7 @@
   ],
   "maintainer": "",
   "icon": "https://osm-catalan.github.io/osmllengcat/src/img/icones_senyera/senyera.svg",
-  "version": "2021_12_09",
+  "version": "2022_11_03",
   "startLat": 0,
   "startLon": 0,
   "startZoom": 1,
@@ -40,8 +40,7 @@
           {
             "if": {
               "and": [
-                "name:ca=",
-                "name~*"
+                "name:ca="
               ]
             },
             "then": {
@@ -51,17 +50,21 @@
           {
             "if": {
               "and": [
-                "name:ca~",
-                "name~*"
+                "name:ca~*"
               ]
             },
             "then": {
               "ca": "Element amb nom en català"
             }
           }
-        ]
+        ],
+        "condition": {
+          "and": []
+        }
       },
-      "description": {},
+      "description": {
+        "ca": "Noms en català"
+      },
       "tagRenderings": [
         {
           "render": {
@@ -71,13 +74,14 @@
             "ca": "Quin nom té en català {name} ? "
           },
           "freeform": {
-            "key": "name:ca"
+            "key": "name:ca",
+            "addExtraTags": []
           },
           "mappings": [
             {
               "if": {
                 "and": [
-                  "name:ca~"
+                  "name:ca="
                 ]
               },
               "then": {
@@ -88,7 +92,7 @@
             {
               "if": {
                 "and": [
-                  "name:ca="
+                  "name:ca~*"
                 ]
               },
               "then": {
@@ -101,6 +105,7 @@
       ],
       "hideUnderlayingFeaturesMinPercentage": 0,
       "icon": {
+        "render": "./assets/svg/bug.svg",
         "mappings": [
           {
             "if": {
@@ -115,36 +120,42 @@
           {
             "if": {
               "and": [
-                "name:ca~"
+                "name:ca~*"
               ]
             },
             "then": {
               "ca": "https://osm-catalan.github.io/osmllengcat/src/img/icones_senyera/senyera.svg"
             }
           }
-        ],
-        "condition": {
-          "and": []
-        }
+        ]
       },
       "width": {
         "render": "8"
       },
       "iconSize": {
-        "render": "40,40,center",
-        "mappings": []
+        "render": "40,40,center"
       },
       "color": {
-        "render": "green",
+        "render": "#00f",
         "mappings": [
           {
             "if": {
               "and": [
-                "name:ca~"
+                "name:ca="
               ]
             },
             "then": {
               "ca": "red"
+            }
+          },
+          {
+            "if": {
+              "and": [
+                "name:ca~*"
+              ]
+            },
+            "then": {
+              "ca": "green"
             }
           }
         ]
